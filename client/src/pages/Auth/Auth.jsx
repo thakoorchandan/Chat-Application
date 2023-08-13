@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Auth.css";
-import Logo from "../../img/logo.png";
 import { logIn, signUp } from "../../actions/AuthActions.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -53,10 +52,8 @@ const Auth = () => {
       {/* left side */}
 
       <div className="a-left">
-        <img src={Logo} alt="" />
-
         <div className="Webname">
-          <h1>Quick Chat</h1>
+          <h1>Riktim Quick Chat</h1>
           <h6>Explore the people throughout the world</h6>
         </div>
       </div>
@@ -88,7 +85,6 @@ const Auth = () => {
               />
             </div>
           )}
-
           <div>
             <input
               required
@@ -121,7 +117,6 @@ const Auth = () => {
               />
             )}
           </div>
-
           <span
             style={{
               color: "red",

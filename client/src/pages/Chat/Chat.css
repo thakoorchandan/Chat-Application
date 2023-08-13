@@ -1,37 +1,127 @@
+/* Main Container */
 .Chat {
   position: relative;
   display: grid;
-  grid-template-columns: 22% auto;
-  gap: 1rem;
+  grid-template-columns: 20% 51% 25%;
+  gap: 1.5rem;
+  height: 95vh;
 }
 
+/* Quick Chat Logo Image */
+.logo > img {
+  margin-left: 20px;
+  margin-top: 10px;
+  height: 100%;
+  width: 80%;
+}
+
+/* Left Side Chat */
 .Left-side-chat {
   display: flex;
   flex-direction: column;
 }
 
+/* Right Side Container */
+.RightContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left Side Profile Container */
+.ProfileContainer {
+  height: 15rem;
+  padding-bottom: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* Right Side Profile Container */
+.RightProfileWithUser {
+  height: 15rem;
+  padding-bottom: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: all 0.25s ease-in-out;
+  width: 80%;
+}
+
+/* Right Side Profile Container Without user details */
+.RightProfileWithoutUser {
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Profile Name With no wrap */
+.UserProfileName{
+  margin-top: 1rem;
+  white-space: nowrap;
+}
+
+/* Empty Receiver card on the right container */
+.emptyProfileName {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Profile Picture on the left side profile card */
+.ProfileImages > img:nth-of-type(1) {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: var(--profileShadow);
+}
+
+/* Archive Button */
+.Archive, .Logout{
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  color: royalblue;
+  font-weight: 600;
+  white-space: nowrap;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+/* Left Side Chat List Container */
 .Chat-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   background: rgba(255, 255, 255, 0.358);
   border-radius: 1rem;
   padding: 1rem;
-  height: auto;
-  min-height: 80vh;
+  height: 55%;
+  min-height: 20vh;
   overflow: scroll;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+/* Chat List Rows */
 .Chat-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+}
+
+.followerImage {
+  width: 30px !important;
+  height: 30px !important;
 }
 
 .Right-side-chat {
   display: flex;
+  background-color: rgba(246, 3, 3, 0);
   flex-direction: column;
   gap: 0.5rem;
+  height: 95vh;
 }
 .conversation:hover {
   background: #80808038;
@@ -40,7 +130,7 @@
 
 .conversation {
   border-radius: 0.5rem;
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 .conversation > div {
@@ -56,7 +146,6 @@
   height: 1rem;
 }
 
-
 .chatbox-empty-message {
   display: flex;
   align-self: center;
@@ -64,12 +153,22 @@
   font-size: 20px;
 }
 
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.358);
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 55%;
+  min-height: 20vh;
+  overflow: scroll;
+}
 
 @media screen and (max-width: 768px) {
- .Chat {
+  .Chat {
     grid-template-columns: 16% auto;
   }
-   .follower.conversation>div>.name{
+  .follower.conversation > div > .name {
     display: none;
-   }
+  }
 }
