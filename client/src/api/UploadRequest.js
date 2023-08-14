@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:5000" });
+const API = axios.create({ baseURL: "https://chat-application-backend-five.vercel.app" });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
