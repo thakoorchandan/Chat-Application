@@ -66,6 +66,8 @@ const ChatBox = ({ chat, currentUser, setSendMessage,  receivedMessage }) => {
   setSendMessage({...message, receiverId})
   // send message to database
   try {
+    if(message.text === "") return 
+    
     const { data } = await addMessage(message);
     setMessages([...messages, data]);
     setNewMessage("");
@@ -143,7 +145,7 @@ useEffect(()=> {
                 value={newMessage}
                 onChange={handleChange}
               />
-              <div className="send-button button" onClick = {handleSend}>Send</div>
+              <div className="button" onClick = {handleSend}>Send</div>
               <input
                 type="file"
                 name=""
