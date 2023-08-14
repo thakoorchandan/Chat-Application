@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { addMessage, getMessages } from "../../api/MessageRequests";
 import { getUser } from "../../api/UserRequests";
 import "./ChatBox.css";
+import defaultProfile from "../../img/defaultProfile.png";
 import { format } from "timeago.js";
 import InputEmoji from 'react-input-emoji'
 
@@ -98,13 +99,7 @@ useEffect(()=> {
               <div className="follower">
                 <div>
                   <img
-                    src={
-                      userData?.profilePicture
-                        ? process.env.REACT_APP_PUBLIC_FOLDER +
-                          userData.profilePicture
-                        : process.env.REACT_APP_PUBLIC_FOLDER +
-                          "defaultProfile.png"
-                    }
+                    src={defaultProfile}
                     alt="Profile"
                     className="followerImage"
                     style={{ width: "50px", height: "50px" }}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getUser } from "../../api/UserRequests";
+import defaultProfile from "../../img/defaultProfile.png";
 const Conversation = ({ data, currentUser, online }) => {
 
   const [userData, setUserData] = useState(null)
@@ -31,7 +32,7 @@ const Conversation = ({ data, currentUser, online }) => {
         <div>
           {online && <div className="online-dot"></div>}
           <img
-            src={userData?.profilePicture? process.env.REACT_APP_PUBLIC_FOLDER + userData.profilePicture : process.env.REACT_APP_PUBLIC_FOLDER + "defaultProfile.png"}
+            src={defaultProfile}
             alt="Profile"
             className="followerImage"
             style={{ width: "50px", height: "50px" }}

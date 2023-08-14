@@ -4,6 +4,7 @@ import { io } from "socket.io-client";
 import _isNull from "lodash/isNull";
 
 import { ToastContainer, toast } from "react-toastify";
+import defaultProfile from "../../img/defaultProfile.png";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -122,11 +123,7 @@ const Chat = () => {
             </div>
             <div className="ProfileImages">
               <img
-                src={
-                  user.profilePicture
-                    ? serverPublic + user.profilePicture
-                    : serverPublic + "defaultProfile.png"
-                }
+                src={defaultProfile}
                 alt="ProfileImage"
               />
             </div>
@@ -186,11 +183,7 @@ const Chat = () => {
               <div className="UserProfileName">
                 <div className="ProfileImages">
                   <img
-                    src={
-                      userData?.profilePicture
-                        ? serverPublic + userData?.profilePicture
-                        : serverPublic + "defaultProfile.png"
-                    }
+                    src={defaultProfile}
                     alt="ProfileImage"
                   />
                 </div>
