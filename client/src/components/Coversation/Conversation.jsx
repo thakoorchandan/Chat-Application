@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+
 import { getUser } from "../../api/UserRequests";
 import defaultProfile from "../../img/defaultProfile.png";
+
+import "./Conversation.css";
+
 const Conversation = ({ data, currentUser, online }) => {
 
   const [userData, setUserData] = useState(null)

@@ -3,6 +3,7 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
+    "heroku": "^8.2.0",
     "nodemon": "^2.0.22",
     "socket.io": "^4.7.2"
   },

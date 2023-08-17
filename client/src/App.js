@@ -29,10 +29,6 @@ function App() {
           element={user ? <Navigate to="../chat" /> : <Auth />}
         />
         <Route
-          path="/profile/:id"
-          element={user ? <Profile /> : <Navigate to="../auth" />}
-        />
-        <Route
           path="*"
           element={
             <main style={{ padding: "1rem" }}>
@@ -40,7 +36,6 @@ function App() {
             </main>
           }
         />
-
         <Route
           path="/chat"
           element={user ? <Chat /> : <Navigate to="../auth" />}
